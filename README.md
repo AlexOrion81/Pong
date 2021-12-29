@@ -1,2 +1,2 @@
-# Pong
-Game
+# Pong 
+Practice making games for prog1
