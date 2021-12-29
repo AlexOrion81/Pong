@@ -1,17 +1,36 @@
+
+import javax.swing.JFrame;
+
 /**
  * @author Jaimee
  *date: 29/12/21
  *version:1
  */
- 
-public class Pong {
+public class Pong extends JFrame{
 
+	private final static int WINDOW_WIDTH = 800;
+	private final static int WINDOW_HEIGHT = 600;	
+	private final static int POINTS_NEEDED_TO_WIN = 10;
+	private final static int PADDLE_WIDTH = 10;
+	private final static int PADDLE_HEIGHT = 20;
+	private final static int BALL_RADIUS = 10;
+	
+	public Pong() {
+		//Utilises JFrame
+		
+		setTitle("Pong"); //title on title bar
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT); //sets start size in pixels
+		setResizable(false); //lets the window size be changed by user, dragged //works better off
+		setVisible(true); //can see it
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // close when press close, other options DO_NOTHING_ON_CLOSE and  HIDE_ON_CLOSE
+	}
+	
 	
 	public static void main(String[] args) {
 
-		System.out.println("Pong Game");
-		
-		
+	
+		new Pong(); //pulls up Pong window
+	
 
 	}
 
