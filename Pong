@@ -3,10 +3,12 @@ import javax.swing.JFrame;
 
 /**
  * @author Jaimee
- *date: 29/12/21
+ *Start date: 29/12/21
+ *Next update: 02/01/22
  *version:1
  */
 public class Pong extends JFrame{
+
 
 	private final static int WINDOW_WIDTH = 800;
 	private final static int WINDOW_HEIGHT = 600;	
@@ -21,6 +23,8 @@ public class Pong extends JFrame{
 		setTitle("Pong"); //title on title bar
 		setSize(WINDOW_WIDTH, WINDOW_HEIGHT); //sets start size in pixels
 		setResizable(false); //lets the window size be changed by user, dragged //works better off
+		add(new PongPanel()); //adds new pongpanel
+		
 		setVisible(true); //can see it
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // close when press close, other options DO_NOTHING_ON_CLOSE and  HIDE_ON_CLOSE
 	}
@@ -28,8 +32,12 @@ public class Pong extends JFrame{
 	
 	public static void main(String[] args) {
 
-	
-		new Pong(); //pulls up Pong window
+		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+	           public void run() {
+	                  new Pong();
+	           }
+	         });
+		
 	
 
 	}
