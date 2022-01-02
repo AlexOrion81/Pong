@@ -1,0 +1,15 @@
+/**
+ * @author Jaimee
+ *Start date: 29/12/21
+ *Next update: 02/01/22
+ *version:1
+ */
+
+public abstract class Paddle {
+
+
+	public Paddle() {
+		
+	}
+
+}
