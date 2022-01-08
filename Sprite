@@ -2,10 +2,10 @@ import java.awt.Color;
 import java.awt.Rectangle;
 
 /**
- @author Jaimee
- Start date: 02/01/22
- Next update: n/a
- Version:1
+ * @author Jaimee
+ * Start date: 02/01/22
+ * Next update: 8/1/22
+ * Version:1
  */
 
 public class Sprite {
@@ -15,24 +15,21 @@ public class Sprite {
 	private Color colour;
 	private int initialXPosition, initialYPosition;
 
-	public Sprite() {
-
-	}
 
 	// Getter methods
-	public int getxPosition() {
+	public int getXPosition() {
 		return xPosition;
 	}
 
-	public int getyPosition() {
+	public int getYPosition() {
 		return yPosition;
 	}
 
-	public int getxVelocity() {
+	public int getXVelocity() {
 		return xVelocity;
 	}
 
-	public int getyVelocity() {
+	public int getYVelocity() {
 		return yVelocity;
 	}
 
@@ -49,11 +46,11 @@ public class Sprite {
 	}
 
 	// Setter methods
-	public void setxPosition(int xPosition) {
+	public void setXPosition(int xPosition) {
 		this.xPosition = xPosition;
 	}
 
-	public void setxPosition(int newX, int panelWidth) {
+	public void setXPosition(int newX, int panelWidth) {
 		xPosition = newX;
 
 		if (xPosition < 0) {
@@ -63,11 +60,11 @@ public class Sprite {
 		}
 	}
 
-	public void setyPosition(int yPosition) {
+	public void setYPosition(int yPosition) {
 		this.yPosition = yPosition;
 	}
 
-	public void setyPosition(int newY, int panelHeight) {
+	public void setYPosition(int newY, int panelHeight) {
 		yPosition = newY;
 		if (yPosition < 0) {
 			yPosition = 0;
@@ -76,11 +73,11 @@ public class Sprite {
 		}
 	}
 
-	public void setxVelocity(int xVelocity) {
+	public void setXVelocity(int xVelocity) {
 		this.xVelocity = xVelocity;
 	}
 
-	public void setyVelocity(int yVelocity) {
+	public void setYVelocity(int yVelocity) {
 		this.yVelocity = yVelocity;
 	}
 
@@ -102,11 +99,12 @@ public class Sprite {
 	}
 
 	public void resetToInitialPosition() {
-		setxPosition(initialXPosition);
-		setyPosition(initialYPosition);
+		setXPosition(initialXPosition);
+		setYPosition(initialYPosition);
 	}
 	
 	 public Rectangle getRectangle() {
-         return new Rectangle(getxPosition(), getyPosition(), getWidth(), getHeight());
+        return new Rectangle(getXPosition(), getYPosition(), getWidth(), getHeight());
      }
 }
+
