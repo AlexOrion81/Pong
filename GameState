@@ -1,0 +1,13 @@
+/**
+ * @author Jaimee
+ *Start date: 08/01/22
+ *Next update: n/a
+ *version:1
+ */
+
+
+public enum GameState {
+	
+	 INITIALISING, GAMEOVER, PLAYING
+	
+}
