@@ -13,9 +13,10 @@ import java.awt.BasicStroke;
 
 /**
  * @author Jaimee
- *  Start date: 02/01/22
- *   Next update: 8/1 version:1
+ * Start date: 02/01/22
+ * Next update: 8/1 version:1
  */
+ 
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
 	private final static Color BACKGROUND_COLOUR = Color.BLACK;
@@ -35,15 +36,15 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	}
 
     public void createObjects() {
-        ball = new Ball(getWidth(), getHeight());
-        paddle1 = new Paddle(Player.One, getWidth(), getHeight());
-        paddle2 = new Paddle(Player.Two, getWidth(), getHeight());
+       ball = new Ball(getWidth(), getHeight());
+       paddle1 = new Paddle(Player.One, getWidth(), getHeight());
+       paddle2 = new Paddle(Player.Two, getWidth(), getHeight());
     }
 
 	private void update() {
 		switch (gameState) {
 		case INITIALISING: {
-			createObjects();
+		  createObjects();
 			gameState = GameState.PLAYING;
 			break;
 		}
@@ -105,5 +106,4 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
 		}
 	}
-
 }

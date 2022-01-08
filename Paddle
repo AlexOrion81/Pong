@@ -8,27 +8,25 @@ import java.awt.Color;
 
 public abstract class Paddle extends Sprite{
 
-	
-	
 	private final static int PADDLE_HEIGHT = 100;
 	private final static int PADDLE_WIDTH= 10;
 	private final static Color PADDLE_COLOUR = Color.BLUE;
 	private final static int DISTANCE_FROM_EDGE= 5;
 
-	public Paddle(Player player, int panelWidth, int panelHeight) {
+public Paddle(Player player, int panelWidth, int panelHeight) {
 		
 	setWidth(PADDLE_WIDTH);
-      	setHeight(PADDLE_HEIGHT);
-      	setColour(PADDLE_COLOUR);
-     	//setDistanceFromEdge(DISTANCE_FROM_EDGE);
-      
-      
-      	int xPos;
-      	if(player == Player.One) {
+  setHeight(PADDLE_HEIGHT);
+  setColour(PADDLE_COLOUR);
+  //setDistanceFromEdge(DISTANCE_FROM_EDGE);
+             
+  int xPos;
+    	if(player == Player.One) {
           xPos = DISTANCE_FROM_EDGE;
-      	} else {
+      } else {
           xPos = panelWidth - DISTANCE_FROM_EDGE - getWidth();
-      	}
+        }
+      
       	setInitialPosition(xPos, panelHeight / 2 - (getHeight() / 2));
       	resetToInitialPosition();
       
